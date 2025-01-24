@@ -19,6 +19,10 @@ if escuela_seleccionada != "Selecciona una opción":
     if carrera_seleccionada != "Selecciona una opción":
         st.success(f"Has seleccionado: {escuela_seleccionada} - {carrera_seleccionada}")
         st.button("Confirmar")
+
+    if st.button("Confirmar"):
+        st.session_state.redirigir_a_page2 = True
+        st.experimental_rerun()
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
     
