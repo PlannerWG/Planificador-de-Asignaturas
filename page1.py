@@ -21,8 +21,9 @@ if escuela_seleccionada != "Selecciona una opción":
         st.button("Confirmar")
 
     if st.button("Confirmar"):
-        st.session_state.redirigir_a_page2 = True
-        st.experimental_rerun()
+        print("hola")
+        #st.session_state.redirigir_a_page2 = True
+        #st.experimental_rerun()
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
     
