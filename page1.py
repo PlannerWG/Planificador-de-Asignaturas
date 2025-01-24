@@ -21,4 +21,5 @@ if escuela_seleccionada != "Selecciona una opción":
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
 
-st.button("Confirmar")
+if escuela_seleccionada != "Selecciona una opción" and carrera_seleccionada != "Selecciona una opción":
+    st.button("Confirmar")
