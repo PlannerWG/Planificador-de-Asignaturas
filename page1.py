@@ -18,7 +18,6 @@ if escuela_seleccionada != "Selecciona una opción":
 
     if carrera_seleccionada != "Selecciona una opción":
         st.success(f"Has seleccionado: {escuela_seleccionada} - {carrera_seleccionada}")
-        st.button("Confirmar")
 
     if st.button("Confirmar"):
         print("hola")
