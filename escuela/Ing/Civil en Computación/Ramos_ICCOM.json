@@ -1,0 +1,446 @@
+[
+    {
+        "id": "ING1001",
+        "module_name": "Precalculo",
+        "especialidad": false,
+        "recommended_semester": 1,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1101",
+        "module_name": "Introduccion a Matematicas Discretas",
+        "especialidad": false,
+        "recommended_semester": 1,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1201",
+        "module_name": "Fisica I",
+        "especialidad": false,
+        "recommended_semester": 1,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1301",
+        "module_name": "Herramientas Computacionales",
+        "especialidad": false,
+        "recommended_semester": 1,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1401",
+        "module_name": "Quimica",
+        "especialidad": false,
+        "recommended_semester": 1,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1501",
+        "module_name": "Introduccion a la Ingenieria",
+        "especialidad": false,
+        "recommended_semester": 1,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1002",
+        "module_name": "Calculo Diferencial e Integral",
+        "especialidad": false,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1001"
+        ]
+    },
+    {
+        "id": "ING1302",
+        "module_name": "Programacion",
+        "especialidad": false,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1301"
+        ]
+    },
+    {
+        "id": "ING1202",
+        "module_name": "Fisica II",
+        "especialidad": false,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1001",
+            "ING1201"
+        ]
+    },
+    {
+        "id": "ING1102",
+        "module_name": "Algebra Lineal",
+        "especialidad": false,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": []
+    },
+    {
+        "id": "ING1402",
+        "module_name": "Introduccion a las Geociencias",
+        "especialidad": false,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+            "ING1401"
+        ]
+    },
+    {
+        "id": "ING2001",
+        "module_name": "Calculo Avanzado",
+        "especialidad": false,
+        "recommended_semester": 3,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1002",
+            "ING1102"
+        ]
+    },
+    {
+        "id": "ING2601",
+        "module_name": "Ecuaciones Diferenciales",
+        "especialidad": false,
+        "recommended_semester": 3,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1002",
+            "ING1102"
+        ]
+    },
+    {
+        "id": "ING2801",
+        "module_name": "Comunicacion Oral y Escrita",
+        "especialidad": false,
+        "recommended_semester": 3,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+        ]
+    },
+    {
+        "id": "COM2101",
+        "module_name": "Matematicas Discretas",
+        "especialidad": true,
+        "recommended_semester": 3,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING1101"
+        ]
+    },
+    {
+        "id": "COM2001",
+        "module_name": "Algoritmos y Estructuras de Datos",
+        "especialidad": true,
+        "recommended_semester": 3,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING1302"
+        ]
+    },
+    {
+        "id": "ING2402",
+        "module_name": "Probabilidades y Estadistica",
+        "especialidad": false,
+        "recommended_semester": 4,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING1002"
+        ]
+    },
+    {
+        "id": "ING2602",
+        "module_name": "Metodos Numericos",
+        "especialidad": false,
+        "recommended_semester": 4,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING2601",
+            "ING1302"
+        ]
+    },
+    {
+        "id": "COM2002",
+        "module_name": "Programacion de Software de Sistemas",
+        "especialidad": true,
+        "recommended_semester": 4,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM2001"
+        ]
+    },
+    {
+        "id": "ING2202",
+        "module_name": "Introduccion a la Bioingenieria",
+        "especialidad": true,
+        "recommended_semester": 4,
+        "anual": 2,
+        "ects": 3,
+        "prerequisites": [
+            "ING1202"
+        ]
+    },
+    {
+        "id": "COM3201",
+        "module_name": "Computacion Grafica y Aplicaciones",
+        "especialidad": true,
+        "recommended_semester": 5,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1302",
+            "ING2001"
+        ]
+    },
+    {
+        "id": "COM3101",
+        "module_name": "Base de datos",
+        "especialidad": true,
+        "recommended_semester": 5,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "COM2101"
+        ]
+    },
+    {
+        "id": "COM3301",
+        "module_name": "Analisis y Diseno de Software",
+        "especialidad": true,
+        "recommended_semester": 5,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "COM2001"
+        ]
+    },
+    {
+        "id": "COM3001",
+        "module_name": "Lenguajes de Programacion",
+        "especialidad": true,
+        "recommended_semester": 5,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "COM2002"
+        ]
+    },
+    {
+        "id": "ING3801",
+        "module_name": "Etica y Responsabilidad social en ingenieria",
+        "especialidad": true,
+        "recommended_semester": 5,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+            "ING1501",
+            "ING2801"
+        ]
+    },
+    {
+        "id": "ING3002",
+        "module_name": "Economia y Gestion",
+        "especialidad": false,
+        "recommended_semester": 6,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING2001"
+        ]
+    },
+    {
+        "id": "COM3002",
+        "module_name": "Arquitectura de computadores",
+        "especialidad": true,
+        "recommended_semester": 6,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM2002"
+        ]
+    },
+    {
+        "id": "COM3302",
+        "module_name": "Interaccion Humano Computador",
+        "especialidad": true,
+        "recommended_semester": 6,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM3301"
+        ]
+    },
+    {
+        "id": "COM3102",
+        "module_name": "Teoria de la Computacion",
+        "especialidad": true,
+        "recommended_semester": 6,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM2101"
+        ]
+    },
+    {
+        "id": "ING3802",
+        "module_name": "Legislacion en ingenieria y medioambiente",
+        "especialidad": false,
+        "recommended_semester": 6,
+        "anual": 2,
+        "ects": 3,
+        "prerequisites": [
+            "ING1402",
+            "ING2202",
+            "ING2801"
+        ]
+    },
+    {
+        "id": "ING4001",
+        "module_name": "Formulacion y Evaluacion de proyectos",
+        "especialidad": false,
+        "recommended_semester": 7,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING3002",
+            "ING3801"
+        ]
+    },
+    {
+        "id": "COM4201",
+        "module_name": "Sistemas operativos",
+        "especialidad": true,
+        "recommended_semester": 7,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING3002"
+        ]
+    },
+    {
+        "id": "COM4301",
+        "module_name": "Ingenieria de Software",
+        "especialidad": true,
+        "recommended_semester": 7,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "COM3302",
+            "COM3101"
+        ]
+    },
+    {
+        "id": "COM4101",
+        "module_name": "Diseno y analisis de algoritmos",
+        "especialidad": true,
+        "recommended_semester": 7,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "COM2001",
+            "COM3102"
+        ]
+    },
+    {
+        "id": "COM4001",
+        "module_name": "Mineria de Datos",
+        "especialidad": true,
+        "recommended_semester": 7,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING2402",
+            "COM2001"
+        ]
+    },
+    {
+        "id": "COM4202",
+        "module_name": "Ciencia e Ingenieria Computacional",
+        "especialidad": true,
+        "recommended_semester": 8,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM4201",
+            "ING2602",
+            "COM3201"
+        ]
+    },
+    {
+        "id": "COM4302",
+        "module_name": "Proyecto de Software",
+        "especialidad": true,
+        "recommended_semester": 8,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING4001",
+            "COM3001",
+            "COM4301"
+        ]
+    },
+    {
+        "id": "COM4102",
+        "module_name": "Redes",
+        "especialidad": true,
+        "recommended_semester": 8,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM4201"
+        ]
+    },
+    {
+        "id": "COM4002",
+        "module_name": "Procesamiento Masivo de Datos",
+        "especialidad": true,
+        "recommended_semester": 8,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "COM2001"
+        ]
+    },
+    {
+        "id": "ING5001",
+        "module_name": "Taller de Proyectos",
+        "especialidad": false,
+        "recommended_semester": 9,
+        "anual": 0,
+        "ects": 12,
+        "prerequisites": [
+            "ING3802",
+            "ING4001",
+            "COM4302",
+            "COM4002"
+        ]
+    }
+]

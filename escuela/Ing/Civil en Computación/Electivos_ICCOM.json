@@ -1,0 +1,28 @@
+[
+    {
+        "id": "COM4402",
+        "module_name": "Introduccion a la Inteligencia Artificial",
+        "especialidad": false,
+        "recommended_semester": 9,
+        "recomendado": true,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING1102",
+            "ING1302",
+            "ING2402"
+        ]
+    },
+    {
+        "id": "COM5101",
+        "module_name": "Analisis y Diseno de Aplicaciones Web",
+        "especialidad": false,
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "COM2001"
+        ]
+    }
+]

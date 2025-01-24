@@ -1,0 +1,141 @@
+[
+    {
+        "id": "ENG1001",
+        "module_number": "ENG1001",
+        "module_name": "Ingles I",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "ENG1002",
+        "module_number": "ENG1002",
+        "module_name": "Ingles II",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 3,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+            "ENG1001"
+        ]
+    },
+    {
+        "id": "ENG1003",
+        "module_number": "ENG1003",
+        "module_name": "Ingles III",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 4,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+            "ENG1002"
+        ]
+    },
+    {
+        "id": "ENG1004",
+        "module_number": "ENG1004",
+        "module_name": "Ingles IV",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 5,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+            "ENG1003"
+        ]
+    },
+    {
+        "id": "ENG1005",
+        "module_number": "ENG1005",
+        "module_name": "Ingles V",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 6,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": [
+            "ENG1004"
+        ]
+    },
+    {
+        "id": "CFG1",
+        "module_number": "CFG1",
+        "module_name": "CFG I",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 2,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "CFG2",
+        "module_number": "CFG2",
+        "module_name": "CFG II",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 3,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "CFG3",
+        "module_number": "CFG3",
+        "module_name": "CFG III",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 4,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "CFG4",
+        "module_number": "CFG4",
+        "module_name": "CFG IV",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 5,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    },
+    {
+        "id": "CFG5",
+        "module_number": "CFG5",
+        "module_name": "CFG V",
+        "especialidad": false,
+        "submodule": false,
+        "submodules": [],
+        "num_required_submodules": 0,
+        "recommended_semester": 6,
+        "anual": 0,
+        "ects": 3,
+        "prerequisites": []
+    }
+    
+]

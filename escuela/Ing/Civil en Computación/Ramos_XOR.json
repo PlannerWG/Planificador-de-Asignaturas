@@ -1,0 +1,31 @@
+[
+    {
+        "id": "II2003",
+        "module_number": "II2003",
+        "module_name": "Fisica y Tecnologia",
+        "especialidad": false,
+        "carrera": "ICCOM",
+        "recommended_semester": 4,
+        "recomendado": true,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING1202"
+        ]
+    },
+    {
+        "id": "ELE2102",
+        "module_number": "ELE2102",
+        "module_name": "Electromagnetismo Aplicado",
+        "especialidad": false,
+        "carrera": "ICCOM",
+        "recommended_semester": 4,
+        "recomendado": false,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING2601",
+            "ING2001"
+        ]
+    }
+]

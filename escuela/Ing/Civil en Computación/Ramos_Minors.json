@@ -1,0 +1,301 @@
+[
+    {
+        "id": "IND2002",
+        "module_name": "Ingenieria de Procesos y Diseno de Servicios",
+        "especialidad": false,
+        "minor": "Ingenieria de Gestion",
+        "recommended_semester": 8,
+        "recomendado": true,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING1302",
+            "ING3002"
+        ]
+    },
+    {
+        "id": "IND2101",
+        "module_name": "Economia Industrial",
+        "especialidad": false,
+        "minor": "Ingenieria de Gestion",
+        "recommended_semester": 9,
+        "recomendado": true,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING1002"
+        ]
+    },
+    {
+        "id": "IND3001",
+        "module_name": "Ingenieria de Marketing",
+        "especialidad": false,
+        "minor": "Ingenieria de Gestion",
+        "recommended_semester": 9,
+        "recomendado": true,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING2402",
+            "ING3002"
+        ]
+    },
+    {
+        "id": "IND3402",
+        "module_name": "Contabilidad y Finanzas",
+        "especialidad": false,
+        "minor": "Ingenieria de Gestion",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING3002",
+            "IND2101"
+        ]
+    },
+    {
+        "id": "IND4101",
+        "module_name": "Gestion de Personas",
+        "especialidad": false,
+        "minor": "Ingenieria de Gestion",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING3002"
+        ]
+    },
+    {
+        "id": "ELE2002",
+        "module_name": "Senales y Sistemas 1",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING2601"
+        ]
+    },
+    {
+        "id": "ELE2201",
+        "module_name": "Diseno Digital y Aplicaciones",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING1102"
+        ]
+    },
+    {
+        "id": "ELE2301",
+        "module_name": "Analisis de Circuitos",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING1102",
+            "ING1002"
+        ]
+    },
+    {
+        "id": "IND3302",
+        "module_name": "Tecnologias de Informacion y Automatizacion",
+        "especialidad": false,
+        "minor": "Operaciones y Manufactura Inteligente",
+        "recommended_semester": 8,
+        "recomendado": true,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING3002"
+        ]
+    },
+    {
+        "id": "IND4301",
+        "module_name": "Taller de Gestion basada en la Evidencia",
+        "especialidad": false,
+        "minor": "Operaciones y Manufactura Inteligente",
+        "recommended_semester": 9,
+        "recomendado": true,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING2402"
+        ]
+    },
+    {
+        "id": "IND4202",
+        "module_name": "Industria Inteligente",
+        "especialidad": false,
+        "minor": "Operaciones y Manufactura Inteligente",
+        "recommended_semester": 8,
+        "recomendado": true,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "IND3302",
+            "ING3002"
+        ]
+    },
+    {
+        "id": "MEC2102",
+        "module_name": "Termodinamica",
+        "especialidad": false,
+        "minor": "Sistemas de Energia",
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING1202",
+            "ING2001"
+        ]
+    },
+    {
+        "id": "MEC4502",
+        "module_name": "Circuitos y Maquinas Electricas",
+        "especialidad": false,
+        "minor": "Sistemas de Energia",
+        "recommended_semester": 8,
+        "recomendado": true,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING1202",
+            "ING2001",
+            "ING2601"
+        ]
+    },
+    {
+        "id": "ELE5001",
+        "module_name": "Proyectos de Energia",
+        "especialidad": false,
+        "minor": "Sistemas de Energia",
+        "recommended_semester": 9,
+        "recomendado": true,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING4001"
+        ]
+    },
+    {
+        "id": "ELE5101",
+        "module_name": "Sistemas de Energia Renovable",
+        "especialidad": false,
+        "minor": "Sistemas de Energia",
+        "recommended_semester": 9,
+        "recomendado": true,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "MEC4502"
+        ]
+    },
+    {
+        "id": "ELE3201",
+        "module_name": "Laboratorio de Ingenieria Electrica y Aplicaciones",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ELE2201"
+        ]
+    },
+    {
+        "id": "ING3101",
+        "module_name": "Exploracion, Visualizacion y Mantenimiento de Datos",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 9,
+        "recomendado": false,
+        "anual": 1,
+        "ects": 6,
+        "prerequisites": [
+            "ING2402",
+            "COM2002"
+        ]
+    },
+    {
+        "id": "IND3701",
+        "module_name": "Optimizacion",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "ING2602"
+        ]
+    },
+    {
+        "id": "IND4201",
+        "module_name": "Logistica, Manufactura y Servicios",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 0,
+        "ects": 6,
+        "prerequisites": [
+            "IND3701",
+            "ING3002"
+        ]
+    },
+    {
+        "id": "IND40002",
+        "module_name": "Gobierno de Datos",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "IND4301",
+            "IND3402"
+        ]
+    },
+    {
+        "id": "IND40102",
+        "module_name": "Gestion de la Calidad",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "IND3302",
+            "IND4201"
+        ]
+    },
+    {
+        "id": "MEC3402",
+        "module_name": "Confiabilidad y Mantenimiento",
+        "especialidad": false,
+        "minor": "",
+        "recommended_semester": 8,
+        "recomendado": false,
+        "anual": 2,
+        "ects": 6,
+        "prerequisites": [
+            "ING2402",
+            "ING2601"
+        ]
+    }
+]
