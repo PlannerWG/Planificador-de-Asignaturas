@@ -27,7 +27,7 @@ if escuela_seleccionada != "Selecciona una opción":
     if carrera_seleccionada != "Selecciona una opción":
         st.success(f"Has seleccionado: {escuela_seleccionada} - {carrera_seleccionada}")
         ing_limit, minors = nivel_ingles()
-        niv_ing = st.selectbox("Grado inicial de inglés", range(1, ing_limit + 1))
+        carrera_vars = st.selectbox("Grado inicial de inglés", range(1, ing_limit + 1))
         minor_elect = st.selectbox("Minor elegido", minors)
 
 else:
