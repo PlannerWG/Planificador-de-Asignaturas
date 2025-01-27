@@ -34,3 +34,24 @@ if escuela_seleccionada != "Selecciona una opción":
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
     
+def abrir_info(escuela_seleccionada,carrera_seleccionada): # Me faltaría hacer un switch o algo así para que las escuelas cuadren.
+    base_url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/{escuela_seleccionada}/{carrera_seleccionada}"
+    archivos = ["Ramos.json", "ENG_CFG.json", "Ramos_Minors.json", "Electivos.json", "Ramos_XOR.json"]
+    
+    for archivo in archivos:
+        archivo_url = f"{base_url}/{archivo}"
+        try:
+            response = requests.get(archivo_url, headers=headers)
+            response.raise_for_status()
+            archivo_data = json.loads(response.json()['content'])
+            datos[archivo.replace(".json", "")] = archivo_data
+        except requests.exceptions.RequestException as e:
+            st.warning(f"Error al obtener el archivo {archivo}: {e}")
+    
+    return datos # Este diccionario funcionaría similar a las variables que se usaban en el código local.
+
+
+#if all(var != "Selecciona una opción" for var in [niv_ing, minor_elect, recomendados]):
+    #abrir_info(escuela_seleccionada,carrera_seleccionada)
+
+
