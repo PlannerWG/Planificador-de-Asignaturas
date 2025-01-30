@@ -1,5 +1,6 @@
 import streamlit as st
 import subprocess
+import requests
 
 #####################################################################################################
 #####################################################################################################
@@ -154,4 +155,4 @@ if all(var != "Selecciona una opción" for var in [niv_ing, minor_elect, recomen
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
 
-    
+
