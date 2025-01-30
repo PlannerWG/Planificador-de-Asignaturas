@@ -134,4 +134,24 @@ if all(var != "Selecciona una opción" for var in [niv_ing, minor_elect, recomen
                         break
                 break
 
+    lista_minors=list()
+    for ramo in ramos_minors:
+        lista_minors.append(ramo["module_name"])
 
+    lista_electivos=list()
+    for ramo in ramos_electivos:
+        lista_electivos.append(ramo["module_name"])
+
+    lista_xors=list()
+    for ramo in ramos_xor:
+        lista_xors.append(ramo["module_name"])
+
+    # El siguiente bloque trabaja en conjunto, es importante señalar que elimina del dict los inglés aprobados y borra el prerrequisito del primero que puede tomar.
+    for i in range(5):
+        if grado_eng>(i+1):
+            eng_cfg.pop(0)
+        else:
+            eng_cfg.pop(5)
+    eng_cfg[0]["prerequisites"]=list()
+
+    
