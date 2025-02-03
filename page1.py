@@ -37,7 +37,7 @@ map_esc = cargar_mapeo("map_esc.json")
 def abrir_info(escuela_seleccionada,carrera_seleccionada): # Me faltaría hacer un switch o algo así para que las escuelas cuadren.
     escuela_seleccionada = map_esc[escuela_seleccionada]
     carrera_seleccionada = map_carr[carrera_seleccionada]
-    base_url = f"https://github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/tree/main/{escuela_seleccionada}/{carrera_seleccionada}"
+    base_url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/{escuela_seleccionada}/{carrera_seleccionada}"
     archivos = ["Ramos.json", "ENG_CFG.json", "Ramos_Minors.json", "Electivos.json", "Ramos_XOR.json", "Minors.json"]
     datos = {}
 
