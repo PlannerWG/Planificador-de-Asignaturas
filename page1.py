@@ -118,7 +118,7 @@ if all(var != "Selecciona una opción" for var in [niv_ing, minor_elect, recomen
     ramos_xor = datos.get("Ramos_XOR", [])
 
     if minor_elect != "Ninguno":
-        ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_resp] #Filtra en base al minor elegido
+        ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
 
     if recomendados== "Si":
         minors_recomendados=list()
