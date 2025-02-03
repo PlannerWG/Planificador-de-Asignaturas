@@ -15,7 +15,7 @@ import json
 headers = {"Accept": "application/vnd.github.v3+json"} # Evita que GITHUB rechace la operación
 # Esta función cumple con emparejar los nombres que ve el usuario en el botón respecto a como se llaman realmente las carpetas.
 def cargar_mapeo(nombre_archivo):
-    url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/tree/main/{nombre_archivo}"
+    url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/{nombre_archivo}"
     try:
         response = requests.get(url)
         response.raise_for_status()  # Lanza un error si la petición falla
@@ -37,7 +37,7 @@ map_esc = cargar_mapeo("map_esc.json")
 def abrir_info(escuela_seleccionada,carrera_seleccionada): # Me faltaría hacer un switch o algo así para que las escuelas cuadren.
     escuela_seleccionada = map_esc[escuela_seleccionada]
     carrera_seleccionada = map_carr[carrera_seleccionada]
-    base_url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/{escuela_seleccionada}/{carrera_seleccionada}"
+    base_url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/tree/main{escuela_seleccionada}/{carrera_seleccionada}"
     archivos = ["Ramos.json", "ENG_CFG.json", "Ramos_Minors.json", "Electivos.json", "Ramos_XOR.json", "Minors.json"]
     datos = {}
 
