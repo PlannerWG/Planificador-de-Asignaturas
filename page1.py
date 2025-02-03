@@ -12,7 +12,11 @@ import json
 #####################################################################################################
 #####################################################################################################
 
-headers = {"Accept": "application/vnd.github.v3+json"} # Evita que GITHUB rechace la operación
+GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
+headers = {
+    "Accept": "application/vnd.github.v3+json",
+    "Authorization": f"token {GITHUB_TOKEN}" # El token queda inaccesible sin el acceso al dev de la app.
+} # Evita que GITHUB rechace la operación
 # Esta función cumple con emparejar los nombres que ve el usuario en el botón respecto a como se llaman realmente las carpetas.
 def cargar_mapeo(nombre_archivo):
     url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/{nombre_archivo}"
