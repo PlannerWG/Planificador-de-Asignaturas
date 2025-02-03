@@ -101,7 +101,7 @@ if escuela_seleccionada != "Selecciona una opción":
         st.success(f"Has seleccionado: {escuela_seleccionada} - {carrera_seleccionada}")
         ing_limit, minors = carrera_vars()
         niv_ing = st.selectbox("Grado inicial de inglés", ["Selecciona una opción"] + list(range(1, ing_limit + 1)))
-        minor_elect = st.selectbox("Minor elegido", ["Selecciona una opción"] + minors)
+        minor_elect = st.selectbox("Minor elegido", ["Selecciona una opción"] + minors["Minors"])
         recomendados = st.selectbox("Usar ramos recomendados", ["Selecciona una opción"] + ["Sí", "No"])
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
@@ -164,5 +164,3 @@ if all(var != "Selecciona una opción" for var in [niv_ing, minor_elect, recomen
         else:
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
-
-
