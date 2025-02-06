@@ -82,6 +82,7 @@ def carrera_vars():
 
 niv_ing = "Selecciona una opción"
 minor_elect = "Selecciona una opción"
+flag = False
 
 # Título de la App
 st.title("Selecciona tu Escuela y Carrera")
