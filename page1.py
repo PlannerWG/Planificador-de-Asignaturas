@@ -150,3 +150,4 @@ if flag:
 
     st.write(lista_minors)
     st.write(lista_xors)
+    st.write(ramos)
