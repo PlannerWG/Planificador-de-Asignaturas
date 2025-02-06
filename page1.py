@@ -146,6 +146,6 @@ if flag:
     eng_cfg[0]["prerequisites"]=list()
 
     for i in eng_cfg:
-    ramos.append(i)
+        ramos.append(i)
 
     st.write(lista_minors)
