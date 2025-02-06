@@ -156,20 +156,4 @@ if flag:
     for ramo in eng_cfg:
         ramos.append(ramo)
 
-    # Lista para los ramos seleccionados
-    ramos_seleccionados = []
-
-    # Crear los checkboxes para los cursos
-    for ramo in lista_electivos:
-        # Si el número de ramos seleccionados es menor que el máximo
-        if len(ramos_seleccionados) < info["Electivos"]:
-            seleccionado = st.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
-            if seleccionado:
-                ramos_seleccionados.append(ramo[0])
-
-    # Botón de confirmación
-    if st.button('Confirmar'):
-        if len(ramos_seleccionados) > 0:
-            st.write("Ramos seleccionados:", ", ".join(ramos_seleccionados))
-        else:
-            st.warning("No seleccionaste ningún ramo. Elige al menos uno.")
+    st.markdown(f"### Elija los electivos de carrera a tomar/tomó. Se deben elegir {info["XOR"]} ramos.")
