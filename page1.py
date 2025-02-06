@@ -3,6 +3,7 @@ import subprocess
 import requests
 import base64
 import json
+import unicodedata
 
 #####################################################################################################
 #####################################################################################################
@@ -73,6 +74,10 @@ def carrera_vars():
     # Entendiendo que las distintas carreras tienen distintas posibilidades en inglés mi idea
     # sería hacer un json o algo para las carreras, por ahora lo dejé en 5 ya que iccom sólo tiene hasta ing 5
 
+def quitar_tildes(texto):
+    # Normalizamos el texto y eliminamos los acentos
+    return ''.join(c for c in unicodedata.normalize('NFD', texto) if unicodedata.category(c) != 'Mn')
+
 #####################################################################################################
 #####################################################################################################
 #####################################################################################################
@@ -125,7 +130,7 @@ if flag:
     ramos_xor = datos.get("Ramos_XOR", [])
 
     if minor_elect != "Ninguno":
-        st.write(minor_elect)
+        minor_elect = quitar_tildes[minor_elect]
         ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
 
     lista_minors=list()
