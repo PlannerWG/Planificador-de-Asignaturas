@@ -1,6 +1,18 @@
+#import streamlit as st
+#import subprocess
+#import requests
+#import base64
+#import json
 
 import requests
 import streamlit as st
+
+url = "https://api.github.com/repos/OWNER/REPO"  # Cambia OWNER y REPO por los correctos
+
+response = requests.get(url)  # Sin autenticación
+
+st.write(f"Status Code: {response.status_code}")
+st.json(response.json())  # Ver el resultado
 
 #####################################################################################################
 #####################################################################################################
@@ -10,7 +22,7 @@ import streamlit as st
 #####################################################################################################
 #####################################################################################################
 
-
+"""
 # Inicialización de GITHUB
 GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 headers = {
@@ -167,3 +179,4 @@ if flag:
         else:
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
+"""
