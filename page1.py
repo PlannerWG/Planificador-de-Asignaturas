@@ -2,18 +2,6 @@
 import requests
 import streamlit as st
 
-GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
-
-headers = {
-    "Accept": "application/vnd.github.v3+json",
-    "Authorization": f"token {GITHUB_TOKEN}"
-}
-
-response = requests.get("https://api.github.com/user", headers=headers)
-
-st.write(f"Status Code: {response.status_code}")
-st.write(f"Response: {response.json()}")
-
 #####################################################################################################
 #####################################################################################################
 #####################################################################################################
@@ -22,7 +10,7 @@ st.write(f"Response: {response.json()}")
 #####################################################################################################
 #####################################################################################################
 
-"""
+
 # Inicialización de GITHUB
 GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 headers = {
@@ -179,4 +167,3 @@ if flag:
         else:
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
-"""
