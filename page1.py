@@ -45,7 +45,7 @@ def abrir_info(escuela_seleccionada,carrera_seleccionada): # Me faltaría hacer 
     escuela_seleccionada = map_esc[escuela_seleccionada]
     carrera_seleccionada = map_carr[carrera_seleccionada]
     base_url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/escuela/{escuela_seleccionada}/{carrera_seleccionada}"
-    archivos = ["Ramos.json", "ENG_CFG.json", "Ramos_Minors.json", "Electivos.json", "Ramos_XOR.json", "Minors.json"]
+    archivos = ["Ramos.json", "ENG_CFG.json", "Ramos_Minors.json", "Electivos.json", "Ramos_XOR.json", "Info.json"]
     datos = {}
 
     for archivo in archivos:
@@ -67,7 +67,7 @@ def abrir_info(escuela_seleccionada,carrera_seleccionada): # Me faltaría hacer 
 
 def carrera_vars():
     datos = abrir_info(escuela_seleccionada,carrera_seleccionada)
-    minors = datos["Minors"]
+    minors = datos["Info"]
     ing_limit = 5 # Esto hay que trabajarlo para cuando haya más carreras
     return ing_limit, minors
     # Entendiendo que las distintas carreras tienen distintas posibilidades en inglés mi idea
@@ -102,9 +102,9 @@ if escuela_seleccionada != "Selecciona una opción":
     carrera_seleccionada = st.selectbox("Selecciona una carrera", ["Selecciona una opción"] + carreras)
     if carrera_seleccionada != "Selecciona una opción":
         st.success(f"Has seleccionado: {escuela_seleccionada} - {carrera_seleccionada}")
-        ing_limit, minors = carrera_vars()
+        ing_limit, info = carrera_vars()
         grado_eng = st.selectbox("Grado inicial de inglés", ["Selecciona una opción"] + list(range(1, ing_limit + 1)))
-        minor_elect = st.selectbox("Minor elegido", ["Selecciona una opción"] + minors["Minors"])
+        minor_elect = st.selectbox("Minor elegido", ["Selecciona una opción"] + info["Minors"])
         if grado_eng != "Selecciona una opción" and minor_elect != "Selecciona una opción":
             st.success(f"Nivel inicial de inglés: {grado_eng} - Minor: {minor_elect}")
             flag = True
@@ -144,5 +144,8 @@ if flag:
         else:
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
+
+    for i in eng_cfg:
+    ramos.append(i)
 
     st.write(lista_minors)
