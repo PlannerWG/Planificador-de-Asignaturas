@@ -133,8 +133,6 @@ if flag:
         minor_elect = quitar_tildes(minor_elect)
         ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
 
-    st.write(ramos_electivos)
-
     lista_minors=list()
     for ramo in ramos_minors:
         lista_minors.append(ramo["module_name"])
@@ -143,7 +141,7 @@ if flag:
     for ramo in ramos_electivos:
         lista_electivos.append(ramo["module_name"])
 
-    lista_electivos = [[curso["module_name"], curso["recommended_semester"]] for curso in cursos]
+    lista_electivos = [[ramos_electivos["module_name"], ramos_electivos["recommended_semester"]] for ramo in ramos]
     lista_electivos = sorted(lista_electivos, key=lambda x: x[1], reverse=True)
     elegir_elect = []
     while lista_electivos:
