@@ -133,6 +133,8 @@ if flag:
         minor_elect = quitar_tildes(minor_elect)
         ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
 
+    st.write(ramos_electivos)
+
     lista_minors=list()
     for ramo in ramos_minors:
         lista_minors.append(ramo["module_name"])
@@ -140,6 +142,13 @@ if flag:
     lista_electivos=list()
     for ramo in ramos_electivos:
         lista_electivos.append(ramo["module_name"])
+
+    """c=0
+    while True:
+        if c==info["XOR"]:
+            break
+
+        c += 1"""
 
     lista_xors=list()
     for ramo in ramos_xor:
@@ -156,7 +165,3 @@ if flag:
     for i in eng_cfg:
         ramos.append(i)
 
-    st.write(lista_minors)
-    st.write(lista_electivos)
-    st.write(lista_xors)
-    st.write(ramos)
