@@ -137,11 +137,7 @@ if flag:
     for ramo in ramos_minors:
         lista_minors.append(ramo["module_name"])
 
-    lista_electivos=list()
-    for ramo in ramos_electivos:
-        lista_electivos.append(ramo["module_name"])
-
-    lista_electivos = [[ramos_electivos["module_name"], ramos_electivos["recommended_semester"]] for ramo in ramos]
+    lista_electivos = [[ramos_electivos["module_name"], ramos_electivos["recommended_semester"]] for ramo in ramos_electivos]
     lista_electivos = sorted(lista_electivos, key=lambda x: x[1], reverse=True)
     elegir_elect = []
     while lista_electivos:
