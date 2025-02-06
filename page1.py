@@ -152,8 +152,8 @@ if flag:
                 elegir_elect.append(ramo)
         for ramo in elegir_elect:
             seleccionado = st.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
-        if lista_electivos[[-1][-1]] 
-            lista_electivos.pop()
+        #if lista_electivos[[-1][-1]]:
+            #lista_electivos.pop()
 
 
 # Ordenar la lista por recommended_semester de manera decreciente
