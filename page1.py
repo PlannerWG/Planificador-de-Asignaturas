@@ -137,18 +137,9 @@ if flag:
     for ramo in ramos_minors:
         lista_minors.append(ramo["module_name"])
 
-    lista_electivos = [[ramos_electivos["module_name"], ramos_electivos["recommended_semester"]] for ramo in ramos_electivos]
-    lista_electivos = sorted(lista_electivos, key=lambda x: x[1], reverse=True)
-    elegir_elect = []
-    while lista_electivos:
-        indice_actual = lista_electivos[[-1][-1]]
-        for ramo in lista_electivos:
-            if ramo[1] == indice_actual:
-                elegir_elect.append(ramo)
-        for ramo in elegir_elect:
-            seleccionado = st.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
-        #if lista_electivos[[-1][-1]]:
-            #lista_electivos.pop()
+    lista_electivos=list()
+    for ramo in ramos_electivos:
+        lista_electivos.append(ramo["module_name"])
 
     lista_xors=list()
     for ramo in ramos_xor:
@@ -162,6 +153,7 @@ if flag:
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
 
-    for i in eng_cfg:
-        ramos.append(i)
+    for ramo in eng_cfg:
+        ramos.append(ramo)
 
+    st.write(lista_electivos)
