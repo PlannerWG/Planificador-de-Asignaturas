@@ -12,11 +12,13 @@ import json
 #####################################################################################################
 #####################################################################################################
 
+# Inicialización de GITHUB
 GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 headers = {
     "Accept": "application/vnd.github.v3+json",
     "Authorization": f"token {GITHUB_TOKEN}" # El token queda inaccesible sin el acceso al dev de la app.
 } # Evita que GITHUB rechace la operación
+
 # Esta función cumple con emparejar los nombres que ve el usuario en el botón respecto a como se llaman realmente las carpetas.
 def cargar_mapeo(nombre_archivo):
     url = f"https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas/contents/{nombre_archivo}"
@@ -80,7 +82,6 @@ def carrera_vars():
 
 niv_ing = "Selecciona una opción"
 minor_elect = "Selecciona una opción"
-recomendados = "Selecciona una opción"
 
 # Título de la App
 st.title("Selecciona tu Escuela y Carrera")
@@ -102,12 +103,14 @@ if escuela_seleccionada != "Selecciona una opción":
         ing_limit, minors = carrera_vars()
         grado_eng = st.selectbox("Grado inicial de inglés", ["Selecciona una opción"] + list(range(1, ing_limit + 1)))
         minor_elect = st.selectbox("Minor elegido", ["Selecciona una opción"] + minors["Minors"])
-        recomendados = st.selectbox("Usar ramos recomendados", ["Selecciona una opción"] + ["Sí", "No"])
+        if grado_eng != "Selecciona una opción" and minor_elect != "Selecciona una opción":
+            st.success(f"Has seleccionado: Nivel inicial: {grado_eng} - Minor: {minor_elect}")
+            flag = True
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
 
 ############# Inicialización de la lógica
-if all(var != "Selecciona una opción" for var in [niv_ing, minor_elect, recomendados]):
+if flag:
     datos = abrir_info(escuela_seleccionada,carrera_seleccionada)
 
     # Consideré usar .get y dar un valor base ya que no sé si en UCONCE los ramos tendrán las mismas características
