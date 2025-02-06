@@ -148,7 +148,7 @@ if flag:
     while lista_electivos:
         indice_actual = lista_electivos[[-1][-1]]
         for ramo in lista_electivos:
-            if ramo[1] == indice_actual
+            if ramo[1] == indice_actual:
             elegir_elect.append(ramo)
         for ramo in elegir_elect:
             seleccionado = st.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
