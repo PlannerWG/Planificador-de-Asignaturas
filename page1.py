@@ -149,3 +149,4 @@ if flag:
         ramos.append(i)
 
     st.write(lista_minors)
+    st.write(lista_xors)
