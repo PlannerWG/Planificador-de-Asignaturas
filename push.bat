@@ -1,3 +1,3 @@
 git add .
-git commit -m "$@"
+git commit -m "Alonso update"
 git push --set-upstream origin main
