@@ -156,4 +156,21 @@ if flag:
     for ramo in eng_cfg:
         ramos.append(ramo)
 
-    st.markdown(f"### Elija los electivos de carrera a tomar/tomó. Se deben elegir {info["XOR"]} ramos.")
+    st.markdown(f"#### Elija los electivos de carrera. Se deben seleccionar {info["XOR"]} ramo(s).")
+
+    # Organizar las checkboxes en columnas horizontales
+    cols = st.columns(info["Electivos"])  # Crear el número de columnas según el máximo
+
+    # Crear los checkboxes para los cursos en columnas
+    for i, ramo in enumerate(lista_electivos):
+        col = cols[i % info["Electivos"]]  # Se asignan los checkboxes a las columnas
+        seleccionado = col.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
+        if seleccionado:
+            ramos_seleccionados.append(ramo[0])
+
+    # Botón de confirmación
+    if st.button('Confirmar'):
+        if len(ramos_seleccionados) > 0:
+            st.write("Ramos seleccionados:", ", ".join(ramos_seleccionados))
+        else:
+            st.warning("No seleccionaste ningún ramo. Elige al menos uno.")
