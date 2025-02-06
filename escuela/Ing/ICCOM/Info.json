@@ -1,5 +1,8 @@
 {
 
-	"Minors":["Ninguno","Ingeniería de Gestión", "Operaciones y Manufactura", "Sistemas de Energía"]
+	"Minors":["Ninguno","Ingeniería de Gestión", "Operaciones y Manufactura", "Sistemas de Energía"],
+	"Electivos":3,
+	"Electivos especialidad":1,
+	"XOR":1
 
 }

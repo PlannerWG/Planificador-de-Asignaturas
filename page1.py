@@ -108,6 +108,8 @@ if escuela_seleccionada != "Selecciona una opción":
         if grado_eng != "Selecciona una opción" and minor_elect != "Selecciona una opción":
             st.success(f"Nivel inicial de inglés: {grado_eng} - Minor: {minor_elect}")
             flag = True
+            cant_electivos = info["Electivos"]
+            cant_electivos_esp = info["Electivos especialidad"]
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
 
@@ -149,5 +151,6 @@ if flag:
         ramos.append(i)
 
     st.write(lista_minors)
+    st.write(lista_electivos)
     st.write(lista_xors)
     st.write(ramos)
