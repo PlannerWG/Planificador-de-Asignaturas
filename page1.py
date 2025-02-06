@@ -106,7 +106,7 @@ if escuela_seleccionada != "Selecciona una opción":
         grado_eng = st.selectbox("Grado inicial de inglés", ["Selecciona una opción"] + list(range(1, ing_limit + 1)))
         minor_elect = st.selectbox("Minor elegido", ["Selecciona una opción"] + minors["Minors"])
         if grado_eng != "Selecciona una opción" and minor_elect != "Selecciona una opción":
-            st.success(f"Has seleccionado: Nivel inicial: {grado_eng} - Minor: {minor_elect}")
+            st.success(f"Nivel inicial de inglés: {grado_eng} - Minor: {minor_elect}")
             flag = True
 else:
     st.warning("Por favor, selecciona una escuela para continuar.")
@@ -124,31 +124,6 @@ if flag:
 
     if minor_elect != "Ninguno":
         ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
-
-    if recomendados== "Si":
-        minors_recomendados=list()
-        contador_minors = 0
-        for minor in ramos_minors:
-            if minor["recomendado"]:
-                minors_recomendados.append(minor["module_name"])
-                ramos.append(minor)
-                contador_minors += 1
-                if contador_minors == 3:
-                    break
-        for electivo in ramos_electivos:
-            if electivo["recomendado"]:
-                electivo_recomendado=electivo["module_name"]
-                ramos.append(electivo)
-                break
-        for xor in ramos_xor:
-            if xor["recomendado"]:
-                xor_recomendado=xor["module_name"]
-                ramos.append(xor)
-                for ramo in ramos:
-                    if ramo["id"] == "COM3002":
-                        ramo["prerequisites"].append(xor["id"])
-                        break
-                break
 
     lista_minors=list()
     for ramo in ramos_minors:
@@ -169,4 +144,5 @@ if flag:
         else:
             eng_cfg.pop(5)
     eng_cfg[0]["prerequisites"]=list()
-    
+
+    st.write(lista_minors)
