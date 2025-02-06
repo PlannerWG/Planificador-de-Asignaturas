@@ -164,9 +164,9 @@ if flag:
     # Crear los checkboxes para los cursos en columnas
     for i, ramo in enumerate(lista_electivos):
         col = cols[i % info["Electivos"]]  # Se asignan los checkboxes a las columnas
-        seleccionado = col.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
+        seleccionado = col.checkbox(f"Elegir: {ramos_electivos[0]} (Semestre {ramos_electivos[1]})")
         if seleccionado:
-            ramos_seleccionados.append(ramo[0])
+            ramos.append(seleccionado)
 
     # Botón de confirmación
     if st.button('Confirmar'):
