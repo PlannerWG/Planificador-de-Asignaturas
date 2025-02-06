@@ -144,6 +144,7 @@ if flag:
         lista_electivos.append(ramo["module_name"])
 
     lista_electivos = [[curso["module_name"], curso["recommended_semester"]] for curso in cursos]
+    lista_electivos = sorted(lista_electivos, key=lambda x: x[1], reverse=True)
     elegir_elect = []
     while lista_electivos:
         indice_actual = lista_electivos[[-1][-1]]
@@ -154,10 +155,6 @@ if flag:
             seleccionado = st.checkbox(f"Elegir: {ramo[0]} (Semestre {ramo[1]})")
         #if lista_electivos[[-1][-1]]:
             #lista_electivos.pop()
-
-
-# Ordenar la lista por recommended_semester de manera decreciente
-lista_modulos_ordenada = sorted(lista_modulos, key=lambda x: x[1], reverse=True)
 
     lista_xors=list()
     for ramo in ramos_xor:
