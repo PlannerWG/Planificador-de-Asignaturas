@@ -130,7 +130,7 @@ if flag:
     ramos_xor = datos.get("Ramos_XOR", [])
 
     if minor_elect != "Ninguno":
-        minor_elect = quitar_tildes[minor_elect]
+        minor_elect = quitar_tildes(minor_elect)
         ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
 
     lista_minors=list()
