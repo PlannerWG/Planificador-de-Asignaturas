@@ -7,7 +7,7 @@
 import requests
 import streamlit as st
 
-url = "https://api.github.com/repos/OWNER/REPO"  # Cambia OWNER y REPO por los correctos
+url = "https://api.github.com/repos/PlannerWG/Planificador-de-Asignaturas"  # Cambia OWNER y REPO por los correctos
 
 response = requests.get(url)  # Sin autenticación
 
