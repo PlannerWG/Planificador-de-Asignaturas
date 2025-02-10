@@ -154,8 +154,9 @@ if flag:
     elec_selec = []
     st.write("Selecciona tus electivos:")
     for electivo in lista_electivos:
-        if st.checkbox(electivo, key=electivo):
-            elec_selec.append(electivo)
+        nombre = electivo[0]  # Solo usamos el nombre
+        if st.checkbox(nombre, key=nombre):
+            elec_selec.append(nombre)
 
     # Validar selección
     if len(elec_selec) < info["XOR"]:
