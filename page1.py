@@ -133,17 +133,9 @@ if flag:
         minor_elect = quitar_tildes(minor_elect)
         ramos_minors = [ramo for ramo in ramos_minors if ramo["minor"] == minor_elect] #Filtra en base al minor elegido
 
-    lista_minors=list()
-    for ramo in ramos_minors:
-        lista_minors.append(ramo["module_name"])
-
-    lista_electivos=list()
-    for ramo in ramos_electivos:
-        lista_electivos.append(ramo["module_name"])
-
-    lista_xors=list()
-    for ramo in ramos_xor:
-        lista_xors.append(ramo["module_name"])
+    lista_minors = [[ramo["module_name"], ramo["recommended_semester"]] for ramo in ramos_minors]
+    lista_electivos = [[ramo["module_name"], ramo["recommended_semester"]] for ramo in ramos_electivos]
+    lista_xors = [[ramo["module_name"], ramo["recommended_semester"]] for ramo in ramos_xor]
 
     # El siguiente bloque trabaja en conjunto, es importante señalar que elimina del dict los inglés aprobados y borra el prerrequisito del primero que puede tomar.
     for i in range(5):
@@ -156,21 +148,6 @@ if flag:
     for ramo in eng_cfg:
         ramos.append(ramo)
 
-    st.markdown(f"#### Elija los electivos de carrera. Se deben seleccionar {info["XOR"]} ramo(s).")
+    st.markdown(f"##### Elija los electivos de carrera. Se deben seleccionar {info["XOR"]} ramo(s).")
 
-    # Organizar las checkboxes en columnas horizontales
-    cols = st.columns(info["Electivos"])  # Crear el número de columnas según el máximo
-
-    # Crear los checkboxes para los cursos en columnas
-    for i, ramo in enumerate(lista_electivos):
-        col = cols[i % info["Electivos"]]  # Se asignan los checkboxes a las columnas
-        seleccionado = col.checkbox(f"Elegir: {ramos_electivos[0]} (Semestre {ramos_electivos[1]})")
-        if seleccionado:
-            ramos.append(seleccionado)
-
-    # Botón de confirmación
-    if st.button('Confirmar'):
-        if len(ramos_seleccionados) > 0:
-            st.write("Ramos seleccionados:", ", ".join(ramos_seleccionados))
-        else:
-            st.warning("No seleccionaste ningún ramo. Elige al menos uno.")
+    
