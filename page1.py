@@ -89,6 +89,7 @@ def quitar_tildes(texto):
 niv_ing = "Selecciona una opción"
 minor_elect = "Selecciona una opción"
 flag = False
+flag2 = False
 
 # Título de la App
 st.title("Selecciona tu Escuela y Carrera")
@@ -165,3 +166,23 @@ if flag:
         st.error(f"Debes seleccionar exactamente {info['XOR']} electivos. Te has pasado por {len(elec_selec) - info['XOR']}.")
     else:
         st.success(f"Has seleccionado correctamente tus {info['XOR']} electivos: {', '.join(elec_selec)}")
+        flag2 = True
+
+if flag2:
+    st.markdown(f"##### Elija los electivos generales / electivos minor. Se deben seleccionar {info["Electivos"]} ramo(s).")
+
+    # Crear checkboxes para cada ramo del minor
+    minors_selec = []
+    st.write("Selecciona tus ramos del minor:")
+    for ramo in lista_minors:
+        nombre = ramo[0]  # Extraer solo el nombre del ramo
+        if st.checkbox(nombre, key=f"minor_{nombre}"):  # Se usa un prefijo para evitar colisiones de clave
+            minors_selec.append(nombre)
+
+    # Validar selección
+    if len(minors_selec) < info["Electivos"]:
+        st.warning(f"Debes seleccionar exactamente {info['Electivos']} ramos. Te faltan {info['Electivos'] - len(minors_selec)}.")
+    elif len(minors_selec) > info["XOR"]:
+        st.error(f"Debes seleccionar exactamente {info['Electivos']} ramos. Te has pasado por {len(minors_selec) - info['Electivos']}.")
+    else:
+        st.success(f"Has seleccionado correctamente tus {info['Electivos']} ramos: {', '.join(minors_selec)}")
