@@ -149,40 +149,59 @@ if flag:
     for ramo in eng_cfg:
         ramos.append(ramo)
 
-    st.markdown(f"##### Elija los electivos de carrera. Se deben seleccionar {info["XOR"]} ramo(s).")
+    ########################## CHECKBOXES DE LOS RAMOS QUE EL USUARIO DEBE ELEGIR
+    ########################## CHECKBOXES DE LOS RAMOS QUE EL USUARIO DEBE ELEGIR
+    ########################## CHECKBOXES DE LOS RAMOS QUE EL USUARIO DEBE ELEGIR
 
-    # Crear checkboxes para cada electivo
-    elec_selec = []
+    ########## CHECKBOX DE RAMOS XOR
+    st.markdown(f"##### Elija los ramos optativos obligatorios. Se deben seleccionar {info["XOR"]} ramo(s).")
+    xor_selec = []
     st.write("Selecciona tus electivos:")
-    for electivo in lista_electivos:
-        nombre = electivo[0]  # Solo usamos el nombre
+    for electivo in lista_xors:
+        nombre = electivo[0]
         if st.checkbox(nombre, key=nombre):
-            elec_selec.append(nombre)
+            xor_selec.append(nombre)
 
     # Validar selección
-    if len(elec_selec) < info["XOR"]:
-        st.warning(f"Debes seleccionar exactamente {info['XOR']} electivos. Te faltan {info['XOR'] - len(elec_selec)}.")
-    elif len(elec_selec) > info["XOR"]:
-        st.error(f"Debes seleccionar exactamente {info['XOR']} electivos. Te has pasado por {len(elec_selec) - info['XOR']}.")
+    if len(xor_selec) < info["XOR"]:
+        st.warning(f"Debes seleccionar exactamente {info['XOR']} electivos. Te faltan {info['XOR'] - len(xor_selec)}.")
+    elif len(xor_selec) > info["XOR"]:
+        st.error(f"Debes seleccionar exactamente {info['XOR']} electivos. Te has pasado por {len(xor_selec) - info['XOR']}.")
     else:
-        st.success(f"Has seleccionado correctamente tus {info['XOR']} electivos: {', '.join(elec_selec)}")
-        flag2 = True
+        st.success(f"Has seleccionado correctamente tus {info['XOR']} optativos: {', '.join(xor_selec)}")
 
-if flag2:
-    st.markdown(f"##### Elija los electivos generales / electivos minor. Se deben seleccionar {info["Electivos"]} ramo(s).")
+        ########## CHECKBOX DE ELECTIVOS DE CARRERA
 
-    # Crear checkboxes para cada ramo del minor
-    minors_selec = []
-    st.write("Selecciona tus ramos del minor:")
-    for ramo in lista_minors:
-        nombre = ramo[0]  # Extraer solo el nombre del ramo
-        if st.checkbox(nombre, key=f"minor_{nombre}"):  # Se usa un prefijo para evitar colisiones de clave
-            minors_selec.append(nombre)
+        st.markdown(f"##### Elija los electivos de carrera. Se deben seleccionar {info["Electivos especialidad"]} ramo(s).")
+        elec_selec = []
+        st.write("Selecciona tus electivos:")
+        for electivo in lista_electivos:
+            nombre = electivo[0]  # Solo usamos el nombre
+            if st.checkbox(nombre, key=nombre):
+                elec_selec.append(nombre)
 
-    # Validar selección
-    if len(minors_selec) < info["Electivos"]:
-        st.warning(f"Debes seleccionar exactamente {info['Electivos']} ramos. Te faltan {info['Electivos'] - len(minors_selec)}.")
-    elif len(minors_selec) > info["XOR"]:
-        st.error(f"Debes seleccionar exactamente {info['Electivos']} ramos. Te has pasado por {len(minors_selec) - info['Electivos']}.")
-    else:
-        st.success(f"Has seleccionado correctamente tus {info['Electivos']} ramos: {', '.join(minors_selec)}")
+        # Validar selección
+        if len(elec_selec) < info["Electivos especialidad"]:
+            st.warning(f"Debes seleccionar exactamente {info['Electivos especialidad']} electivos. Te faltan {info['Electivos especialidad'] - len(elec_selec)}.")
+        elif len(elec_selec) > info["Electivos especialidad"]:
+            st.error(f"Debes seleccionar exactamente {info['Electivos especialidad']} electivos. Te has pasado por {len(elec_selec) - info['Electivos especialidad']}.")
+        else:
+            st.success(f"Has seleccionado correctamente tus {info['Electivos especialidad']} electivos: {', '.join(elec_selec)}")
+            
+            ########## CHECKBOX DE ELECTIVOS/MINORS
+
+            st.markdown(f"##### Elija los electivos generales / electivos minor. Se deben seleccionar {info["Electivos"]} ramo(s).")
+            minors_selec = []
+            st.write("Selecciona los ramos:")
+            for ramo in lista_minors:
+                nombre = ramo[0] 
+                if st.checkbox(nombre, key=f"minor_{nombre}"):
+                    minors_selec.append(nombre)
+
+            # Validar selección
+            if len(minors_selec) < info["Electivos"]:
+                st.warning(f"Debes seleccionar exactamente {info['Electivos']} ramos. Te faltan {info['Electivos'] - len(minors_selec)}.")
+            elif len(minors_selec) > info["Electivos"]:
+                st.error(f"Debes seleccionar exactamente {info['Electivos']} ramos. Te has pasado por {len(minors_selec) - info['Electivos']}.")
+            else:
+                st.success(f"Has seleccionado correctamente tus {info['Electivos']} ramos: {', '.join(minors_selec)}")
