@@ -150,4 +150,17 @@ if flag:
 
     st.markdown(f"##### Elija los electivos de carrera. Se deben seleccionar {info["XOR"]} ramo(s).")
 
-    
+    # Crear checkboxes para cada electivo
+    elec_selec = []
+    st.write("Selecciona tus electivos:")
+    for electivo in lista_electivos:
+        if st.checkbox(electivo, key=electivo):
+            elec_selec.append(electivo)
+
+    # Validar selección
+    if len(elec_selec) < info["XOR"]:
+        st.warning(f"Debes seleccionar exactamente {info['XOR']} electivos. Te faltan {info['XOR'] - len(elec_selec)}.")
+    elif len(elec_selec) > info["XOR"]:
+        st.error(f"Debes seleccionar exactamente {info['XOR']} electivos. Te has pasado por {len(elec_selec) - info['XOR']}.")
+    else:
+        st.success(f"Has seleccionado correctamente tus {info['XOR']} electivos: {', '.join(elec_selec)}")
